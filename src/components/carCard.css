@@ -1,0 +1,39 @@
+.card-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .car-table {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .car-row {
+    display: flex;
+  }
+  
+  .car-row > div {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .car-row.header > div {
+    font-weight: bold;
+  }
+  
+  .even {
+    background-color: #f2f2f2;
+  }
+  
+  .odd {
+    background-color: #ffffff;
+  }
+  

@@ -14,7 +14,7 @@ function Header({ page }) {
             Voltar
           </button>
         ) : (
-          <button className="btn btn-primary" onClick={() => window.location.href = `${url}/newCar`}>
+          <button className="btn btn-primary" onClick={() => window.location.href = `${url}newCar`}>
             Cadastrar novo carro
           </button>
         )}

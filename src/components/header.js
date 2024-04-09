@@ -1,7 +1,5 @@
 import React from "react";
 
-const url = "https://main--wscar-melgaco.netlify.app/";
-
 function Header({ page }) {
   return (
     <div className="header">
@@ -10,11 +8,11 @@ function Header({ page }) {
       </h1>
       <div>
         {page === "newCar" ? (
-          <button className="btn btn-primary" onClick={() => window.location.href = url}>
+          <button className="btn btn-primary" onClick={() => window.location.href="/"}>
             Voltar
           </button>
         ) : (
-          <button className="btn btn-primary" onClick={() => window.location.href = `${url}newCar`}>
+          <button className="btn btn-primary" onClick={() => window.location.href="/newCar"}>
             Cadastrar novo carro
           </button>
         )}

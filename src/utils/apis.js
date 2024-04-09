@@ -6,7 +6,6 @@ const getCars = async () => {
 }
 
 const getCarsByBrand = async () => {
-  console.log('url:', url);
     const response = await fetch(`${url}/getCarsByBrand`);
     return response.json();
 }

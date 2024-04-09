@@ -1,11 +1,12 @@
-const url = process.env.API_URL;
+const url = 'https://wscar-api.onrender.com';
 
 const getCars = async () => {
-  const response = await fetch(`https://wscar-api.onrender.com/getCars`);
+  const response = await fetch(`${url}/getCars`);
   return response.json();
 }
 
 const getCarsByBrand = async () => {
+  console.log('url:', url);
     const response = await fetch(`${url}/getCarsByBrand`);
     return response.json();
 }

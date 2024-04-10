@@ -15,6 +15,9 @@ function CarList() {
   }
 
   useEffect(() => {
+
+    document.title = 'WS Cars - Lista de Carros';
+
     getCars().then((response) => {
       setCars(response);
     });

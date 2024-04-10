@@ -1,4 +1,4 @@
-const url = 'https://wscar-api.onrender.com';
+const url = process.env.REACT_APP_API_URL;
 
 const getCars = async () => {
   const response = await fetch(`${url}/getCars`);

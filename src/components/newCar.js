@@ -28,10 +28,8 @@ function NewCarForm() {
     }
     if (carData.brand === "") {
       await createCar(carData);
-      window.location.redirect("/");
     } else {  
       await createCarByBrand(carData);
-      window.location.redirect("/");
     }
   };
 

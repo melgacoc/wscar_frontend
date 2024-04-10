@@ -21,15 +21,20 @@ function NewCarForm() {
     return true;
   }
 
-  const createCarHandler = async () => {
+  const createCarHandler = async (event) => {
+    event.preventDefault();
     if (!verifyData()) {
       alert("Preencha todos os campos obrigatórios!");
       return;
     }
     if (carData.brand === "") {
       await createCar(carData);
+      alert("Carro cadastrado com sucesso!");
+      window.location.href = "/";
     } else {  
       await createCarByBrand(carData);
+      alert("Carro cadastrado com sucesso!");
+      window.location.href = "/";
     }
   };
 
@@ -38,11 +43,8 @@ function NewCarForm() {
     let parsedValue = value;
   
     if (name === 'modelo_id' || name === 'ano' || name === 'num_portas' || name === 'brand') {
-      parsedValue = value === '' ? null : parseInt(value);
-    } else if (name === 'valor') {
-      parsedValue = value === '' ? null : parseFloat(value);
-    }
-  
+      parsedValue = !isNaN(value.trim()) ? parseInt(value.trim()) : '';
+    } 
     setCarData({ ...carData, [name]: parsedValue });
   };
   
@@ -52,7 +54,7 @@ function NewCarForm() {
       <form>
         <br />
         <label>
-          Modelo ID:
+          *Modelo ID:
           <input
             type="text"
             name="modelo_id"
@@ -62,7 +64,7 @@ function NewCarForm() {
         </label>
         <br />
         <label>
-          Ano:
+          *Ano:
           <input
             type="text"
             name="ano"
@@ -72,7 +74,7 @@ function NewCarForm() {
         </label>
         <br />
         <label>
-          Combustível:
+          *Combustível:
           <input
             type="text"
             name="combustivel"
@@ -82,7 +84,7 @@ function NewCarForm() {
         </label>
         <br />
         <label>
-          Número de Portas:
+          *Número de Portas:
           <input
             type="text"
             name="num_portas"
@@ -92,7 +94,7 @@ function NewCarForm() {
         </label>
         <br />
         <label>
-          Cor:
+          *Cor:
           <input
             type="text"
             name="cor"
@@ -102,7 +104,7 @@ function NewCarForm() {
         </label>
         <br />
         <label>
-          Nome do Modelo:
+         *Nome do Modelo:
           <input
             type="text"
             name="nome_modelo"
@@ -112,12 +114,13 @@ function NewCarForm() {
         </label>
         <br />
         <label>
-          Valor:
+          *Valor:
           <input
             type="text"
             name="valor"
             value={carData.valor}
             onChange={handleChange}
+            pattern="[0-9]*[.,]?[0-9]*"
           />
         </label>
         <br />
@@ -131,7 +134,7 @@ function NewCarForm() {
           />
         </label>
         <br />
-        <button type="submit"
+        <button type="button"
         onClick={createCarHandler}
         >
           Cadastrar

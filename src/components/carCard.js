@@ -4,7 +4,6 @@ import './carCard.css'
 function CarCards({ cars, tab }) {
     return (
       <div className="card">
-        <h2>All Cars</h2>
         <div className="car-table">
           <div className="car-row header">
             <div>ID</div>

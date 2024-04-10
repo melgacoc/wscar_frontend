@@ -1,22 +1,12 @@
 import React from "react";
+import "./header.css";
 
-function Header({ page }) {
+function Header() {
   return (
-    <div className="header">
+    <div className="headerPage">
       <h1>
         WS Cars
       </h1>
-      <div>
-        {page === "newCar" ? (
-          <button className="btn btn-primary" onClick={() => window.location.href="/"}>
-            Voltar
-          </button>
-        ) : (
-          <button className="btn btn-primary" onClick={() => window.location.href="/newCar"}>
-            Cadastrar novo carro
-          </button>
-        )}
-      </div>
     </div>
   );
 }

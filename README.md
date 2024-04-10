@@ -30,7 +30,7 @@ Para iniciar a aplicação: `npm start`
 ---
 ## COMPONENTE
 
-Este projeto contém um componente chamado CarCards que é responsável por renderizar a lista de carros recebidos da API. Este componente CarCards recebe duas propriedades: cars que é um array de objetos contendo informações dos carros e tab que indica o tipo de visualização (por exemplo, 'all' para todos os carros ou 'brand' para carros por marca).
+Este projeto contém um componente chamado CarCards que é responsável por renderizar a lista de carros recebidos da API. Este componente CarCards recebe duas propriedades: cars que é um array de objetos contendo informações dos carros e tab que indica o tipo de visualização.
 <br>
 ![image](https://github.com/melgacoc/wscar_frontend/assets/102910580/50319045-6e55-4a5f-9e99-f37e99e29820)
 

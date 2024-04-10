@@ -1,9 +1,9 @@
 # WS Car
 
-## Summary
+## Descrição
 Está aplicação, tem como objetivo, consumir uma API que traz informações de carros para serem reenderizados na tela por meio de um componente que trata essas informações.
 
-## Technologies
+## Tecnologias
 Este projeto foi realizado utilizando as seguintes tecnologias:
 
 ![React Badge](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -12,7 +12,7 @@ Este projeto foi realizado utilizando as seguintes tecnologias:
 ---
 ## API
 A API utilizada [WS_CAR_API](https://wscar-api.onrender.com) 
-Você pode acessar o seu repositório por aqui[Repo_WS_CAR_API](https://github.com/melgacoc/wscar_api).
+Você pode acessar o seu repositório por aqui [Repo_WS_CAR_API](https://github.com/melgacoc/wscar_api).
 
 ## Installation
 Clone o repositório: `git clone https://github.com/melgacoc/pokedex.git`
@@ -26,6 +26,12 @@ REACT_APP_API_URL="https://wscar-api.onrender.com"
 Se preferir, rode a aplicação backend localmente e troque pelo localhost:3030
 
 Para iniciar a aplicação: `npm start`
+
+---
+## COMPONENTE
+
+Este projeto contém um componente chamado CarCards que é responsável por renderizar a lista de carros recebidos da API. Este componente CarCards recebe duas propriedades: cars que é um array de objetos contendo informações dos carros e tab que indica o tipo de visualização (por exemplo, 'all' para todos os carros ou 'brand' para carros por marca).
+![image](https://github.com/melgacoc/wscar_frontend/assets/102910580/95589867-64d5-4020-a111-bfb239f232d4)
 
 ## Deploy
 

@@ -1,4 +1,6 @@
 import CarCards from '../components/carCard.js';
+import NewCarForm from '../components/newCar.js';
+import React from 'react';
 import Header from '../components/header.js';
 import { useState, useEffect } from 'react';
 import './carList.css';
@@ -42,12 +44,20 @@ function CarList() {
             >
               Por Marca
             </button>
+            <button
+              className={activeTab === 'newCar' ? 'active' : ''}
+              onClick={() => switchTab('newCar')} >
+              Cadastrar Novo Carro
+            </button>
         </div>
         {
             activeTab === 'brand' && <CarCards cars={carsByBrand} tab={activeTab} />
         }
         {
             activeTab === 'all' && < CarCards cars={cars} tab={activeTab}/>
+        }
+        {
+            activeTab === 'newCar' && <NewCarForm />
         }
     </div>
   );
